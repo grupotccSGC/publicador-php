@@ -59,7 +59,6 @@
             <th data-field="empresa">Empresa</th>
             <th data-field="menssagem" data-cell-style="cellStyleMenssagem">Menssagem</th>
             <th data-field="data_de_envio">Data cadastro</th>
-            <th data-formatter="AçãoFormatter">Entrar em contato</th>
           </tr>
         </thead>
         </table>
@@ -93,12 +92,6 @@
         `<li><img src="${row.foto}" alt="${value}" class="rounded mr-2 img-style" width="40px" heigth="40px"></li>` +
         `<li class="pt-2 pb-2">${value}</li>`
         ].join('');
-    }
-
-    function AçãoFormatter(value, row, index){
-            return [
-            `<a href="/fale-conosco/enviar-email/${row.id}" class="btn bg-white rounded-xl py-2 px-3 text-lg font-semibold tracking-tighter text-black">enviar</a>`
-            ].join('');
     }
 
     function cellStyleMenssagem(value, row, index){
